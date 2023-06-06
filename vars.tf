@@ -26,6 +26,8 @@ variable "vnet_var" {
   type      = string
 }
 
+
+
 ################## Virtual Machine Configurations ##################
 
 variable "node_host_names_var" {
@@ -56,6 +58,17 @@ variable "os_offer_var" {
 variable "sku_var" {
   type      = string
 }
+
+variable "admin_username_var" {
+  type      = string
+  sensitive = true
+}
+
+variable "admin_password_var" {
+  type      = string
+  sensitive = true
+}
+
 
 ################## Disk Configurations ##################
 
