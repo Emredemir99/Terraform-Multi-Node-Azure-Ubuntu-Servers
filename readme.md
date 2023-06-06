@@ -18,25 +18,32 @@
 | tenant_id_var                 | Tenant ID                                                        | string       |
 | resource_group_var            | Resource Group                                                   | string       |
 | location_var                  | VM Location  (Usually West Europe)                               | string       |
-| subnet                        | Subnet                                                           | string       |
-| vnet                          | VNet                                                             | string       |
+| subnet_var                    | Subnet                                                           | string       |
+| vnet_var                      | VNet                                                             | string       |
 
 
 # OPTIONS VM Conf (variables.tfvars)
 | variable_name                 | description                                                      | type         |
 |-------------------------------|------------------------------------------------------------------|--------------|
-| node_count                    | VM Count                                                         | number       |
-| node_host_names               | VM HostNames                                                     | list(any)    |
-| node_ips                      | VM IP Addresses                                                  | list(any)    |
-| size_var                      | Machine Type                                                     | string       |
-| admin_username_var            | Admin Username                                                   | string       |
-| admin_password_var            | Admin Password                                                   | string       |
+| node_count_var                | VM Count                                                         | number       |
+| node_host_names_var           | VM HostNames                                                     | list(any)    |
+| node_ips_var                  | VM IP Addresses                                                  | list(any)    |
+| vm_size_var                   | Machine Type   (Usually Standard_D8s_v5)                         | string       |
+| sku_var                       | OS Version                                                       | string       |
+| os_offer_var                  | OS Disk Size (GB)                                                | string       |
+| storage_account_type_var      | Storage type (Usually Standard_LRS)                              | string       |
+| admin_username_var            | Azure VM Username                                                | string       |
+| admin_password_var            | Azure VM Password                                                | string       |
+
+
+
 
 # OPTIONS VM Disk Conf (variables.tfvars)
 | variable_name                 | description                                                      | type         |
 |-------------------------------|------------------------------------------------------------------|--------------|
 | is_data_disk_enable           | Data disk enable or disable                                      | bool         |
-| disk_size_gb_var              | OS Disk Size      (GB)                                           | number       |
+| os_disk_size_gb_var           | OS Disk Size      (GB)                                           | number       |
+| data_disk_size_gb_var         | Data Disk Size    (GB)                                           | number       |
 | data_disk_count_per_vm        | Data Disk count                                                  | number       |
 
 
