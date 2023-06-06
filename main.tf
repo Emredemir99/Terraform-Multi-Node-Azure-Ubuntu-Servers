@@ -33,7 +33,7 @@ resource "azurerm_linux_virtual_machine" "vm_config" {
   os_disk {
     caching                       = "ReadWrite"
     storage_account_type          = var.storage_account_type_var
-	  disk_size_gb                  = var.os_disk_size_gb_var
+	  disk_size_gb            = var.os_disk_size_gb_var
   }
 
   source_image_reference {
